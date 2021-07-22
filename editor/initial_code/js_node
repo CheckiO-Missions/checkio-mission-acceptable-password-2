@@ -2,7 +2,6 @@
 var assert = require('assert');
 
 if (!global.is_checking) {
-
     // These "asserts" are used for self-checking
     assert.equal(isAcceptablePassword('short'), false);
     assert.equal(isAcceptablePassword('muchlonger'), false);
