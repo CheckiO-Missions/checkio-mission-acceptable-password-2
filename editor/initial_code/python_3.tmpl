@@ -1,16 +1,4 @@
-{% comment %}New initial code template{% endcomment %}
-{% block env %}{% endblock env %}
-
-{% block start %}
-{% endblock start %}
-
-{% block example %}
-{% endblock %}
-
 {% block tests %}
 {% for t in tests %}
 assert {% block call %}is_acceptable_password({{t.input|p_args}}){% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
 {% endblock %}
-
-{% block final %}
-{% endblock final %}
