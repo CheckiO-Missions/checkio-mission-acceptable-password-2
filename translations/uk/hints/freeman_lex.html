@@ -1,0 +1,127 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Я уявлення не маю, як почати розв'язування цієї місії.
+    </div>
+    <div class="answer">
+        Давай продовжимо розв'язок з останньої підказки попередньої місії в серії.
+        <br />
+        <br />
+        <pre class="brush: python">
+def is_acceptable_password(password: str) -> bool:
+
+    cond1 = len(password) > 6
+
+    return cond1    
+        </pre>
+        У цій місії тобі слід додати до розв'язку перевірку чи пароль містить хоча
+        б одну цифру.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        З якого інструменту мені варто почати?
+    </div>
+    <div class="answer">
+        Перш за все, прочитай про функцію <a target="_blank" href="https://www.w3schools.com/python/ref_func_any.asp">any()</a>.
+        Вона повертає True, якщо хоч якийсь елемент в послідовності всередині є True.
+        <br />
+        <br />
+        <pre class="brush: python">
+cond2 = any(...)        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Добре. Але як саме перевірити, що символ є цифрою?
+    </div>
+    <div class="answer">
+        Використай метод рядків <a target="_blank" href="https://www.w3schools.com/python/ref_string_isdigit.asp">str.isdigit()</a>.
+        Він повертає True, якщо символ є цифрою.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Це перевірки одного символа. Як перевірити всі символи у вхідному рядку?
+    </div>
+    <div class="answer">
+        Використай функцію <a target="_blank" href="https://www.w3schools.com/python/ref_func_map.asp">map()</a>
+        як аргумент функції any():
+        <br />
+        <br />
+        <pre class="brush: python">
+cond2 = any(map(str.isdigit, password))    
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібно, щоб обидві умови були True, щоб розв'язати цю місію. Як це зробити?
+    </div>
+    <div class="answer">
+        Використай функцію <a target="_blank" href="https://www.w3schools.com/python/ref_func_all.asp">all()</a>
+        після return з послідовністю з обох умов:
+    <br />
+    <br />
+        <pre class="brush: python">
+return all([cond1, cond2])
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        То як мій остаточний розв'язок має виглядати?
+    </div>
+    <div class="answer">
+        Ось він:
+    <br />
+    <br />
+        <pre class="brush: python">
+def is_acceptable_password(password: str) -> bool:
+
+    cond1 = len(password) > 6
+    cond2 = any(map(str.isdigit, password))
+
+    return all([cond1, cond2])
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Покажи мені більше розв'язків!<br />
+        Адже я хочу стати справжнім Python Ніндзею!
+    </div>
+    <div class="answer">
+        Звісно, тримай!<br />
+        Здійсни пошук символа з допомогою регулярного виразу з попередньо імпортованого
+        модуля re. Використай функцію bool() для перетворення результату пошуку в логічне 
+        (булеве) значення. Використай lambda вираз для компактного вигляду.     
+        <br />
+        <br />
+        <pre class="brush: python">
+import re
+
+is_acceptable_password = lambda x: bool(len(x)>6 and re.search('\d', x))
+        </pre>
+        Знайди перетин множини вхідного рядка і множини рядка цифр, перетвори
+        результат в логічне (булеве) значення.
+        <br />  
+        <br />
+        <pre class="brush: python">
+is_acceptable_password = lambda x: len(x) > 6 and bool(set(x) & set("0123456789"))
+        </pre>
+    <br />
+    <br />
+        Тисни "Best solutions" в меню місії і ти побачиш багато інших цікавих розв'язків!
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Дякую! Тепер я знаю і розумію більше! Все працює як слід!
+    </div>
+    <div class="answer">
+        Приємно це чути! Спробуй розв'язати наступну в цій серії.
+    </div>
+</div>
+</body>
