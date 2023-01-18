@@ -28,12 +28,12 @@ TESTS = {
         {
             "input": ["sh5"],
             "answer": False
-        }
+        },
     ],
     "Extra": [
         {
             "input": ["this is password"],
             "answer": False
-        }
+        },
     ]
 }
