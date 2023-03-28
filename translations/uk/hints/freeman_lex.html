@@ -88,6 +88,7 @@ return all([cond1, cond2])
         <p>
             Ось він:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def is_acceptable_password(password: str) -> bool:
 
@@ -96,6 +97,7 @@ def is_acceptable_password(password: str) -> bool:
 
     return all([cond1, cond2])
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -112,17 +114,21 @@ def is_acceptable_password(password: str) -> bool:
         <p>
             Здійсни пошук символа з допомогою регулярного виразу з попередньо імпортованого модуля <b class="code">re</b>. Використай функцію <b class="code">bool()</b> для перетворення результату пошуку в логічне (булеве) значення. Використай lambda вираз для компактного вигляду.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 import re
 
 is_acceptable_password = lambda x: bool(len(x)>6 and re.search('\d', x))
         </pre>
+        </div>
         <p>
             Знайди перетин множини вхідного рядка і множини рядка цифр, перетвори результат в логічне (булеве) значення.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 is_acceptable_password = lambda x: len(x) > 6 and bool(set(x) & set("0123456789"))
         </pre>
+        </div>
         <p><b>
             Тисни "Best solutions" в меню місії і ти побачиш багато інших цікавих розв'язків!
         </b></p>
