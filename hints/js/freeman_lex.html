@@ -1,0 +1,148 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            I have no idea how to start solving this mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Let's continue with the solution from hints of the previous mission in
+        the series.
+        </p>
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length > 6;
+    
+    return cond1;
+}  
+        </pre>
+        <p>
+            In this mission you should add to this solution checking if password contains at least one digit. 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            What instrument should I start from?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            First of all, read about regular expressions <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_test.asp">test()</a> method. It tests for a match in a string and returns <b class="code">true</b> if found.
+        </p>
+        <pre class="brush: javascript">
+cond2 = ... .test(password);        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. But what am I looking for?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           It is said, that <b class="code">password</b> must have at least one digit. So as a pattern you need to use so called <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">digit metacharacter</a>. 
+        </p>
+        <pre class="brush: javascript">
+cond2 = /\d/.test(password);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            I need both conditions be <b class="code">true</b> to solve the mission. How to do that?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Use method <a target="_blank" href="https://www.w3schools.com/jsref/jsref_includes_array.asp">includes()</a> after return statement with array of both conditions.
+        </p>
+        <pre class="brush: javascript">
+return [cond1, cond2].includes(...);
+        </pre>
+        <p>
+            To pass tests, every element must be <b class="code">true</b>. So, you need to check, if the array includes <b class="code">false</b> and invert the result since you do NOT need it to include <b class="code">false</b>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            So how my final solution for this mission should look like?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Here it is: 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length > 6;
+    const cond2 = /\d/.test(password);
+    
+    return !([cond1, cond2].includes(false));
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<!-- <div class="question-answer">
+    <div class="question">
+        <p>
+            Show me more solutions! <br />
+            'Cause I wanna be a real 🥇 Python Ninnjaa!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sure, grab it!
+        </p>
+        <p>
+            Search a character with digit regex from pre-imported <b class="code"> re</b> module. Use <b class="code">bool()</b> function to transform result of search into boolean. Use <b class="code">lambda</b> expression for compact view.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+import re
+
+is_acceptable_password = lambda x: bool(len(x)>6 and re.search('\d', x))
+        </pre>
+        </div>
+        <p>
+            Find intersection of input string set and string of digits set and
+        transform the result into bool.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+is_acceptable_password = lambda x: len(x) > 6 and bool(set(x) & set("0123456789"))
+        </pre>
+        </div>
+        <p>
+            <b>
+                If you click "Best solutions" at mission menu, you see a lot of other
+        interesting solutions!
+            </b>
+        </p>
+    </div>
+</div> -->
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Thanks! I know and understand more now! Everything works fine!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Glad to hear it! Try to solve the next one in this series.
+        </p>
+    </div>
+</div>
+</body>
+    
