@@ -1,0 +1,139 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je n'ai aucune idée de la manière de commencer à résoudre cette mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Continuons avec la solution des indices de la mission précédente de la série
+        la série.
+        </p>
+        <pre class="brush: javascript">
+function isAcceptablePassword(password : string) : boolean {
+
+    const cond1 = password.length &gt; 6 ;
+    
+    return cond1 ;
+}  
+        </pre>
+        <p>
+            Dans cette mission, vous devez ajouter à cette solution la vérification que le mot de passe contient au moins un chiffre. 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            De quel instrument dois-je partir ?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Tout d'abord, lisez la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_test.asp">test()</a> des expressions régulières. Elle teste la présence d'une correspondance dans une chaîne de caractères et renvoie <b class="code">un résultat positif</b> si elle est trouvée.
+        </p>
+        <pre class="brush: javascript">
+cond2 = ... .test(password) ; 
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            D'accord, mais qu'est-ce que je cherche ? Mais qu'est-ce que je cherche ?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           Il est dit que le <b class="code">mot de passe</b> doit comporter au moins un chiffre. Vous devez donc utiliser ce que l'on appelle <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">un métacaractère numérique</a> comme motif. 
+        </p>
+        <pre class="brush: javascript">
+cond2 = /\d/.test(password) ;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            J'ai besoin que les deux conditions soient <b class="code">vraies</b> pour résoudre la mission. Comment faire ?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Utilisez la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_includes_array.asp">includes()</a> après l'instruction return avec le tableau des deux conditions.
+        </p>
+        <pre class="brush: javascript">
+return [cond1, cond2].includes(...) ;
+        </pre>
+        <p>
+            Pour réussir les tests, chaque élément doit être <b class="code">vrai</b>. Vous devez donc vérifier si le tableau inclut <b class="code">false</b> et inverser le résultat puisque vous n'avez PAS besoin qu'il inclue <b class="code">false</b>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            À quoi devrait ressembler ma solution finale pour cette mission ?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            La voici : 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(password : string) : boolean {
+
+    const cond1 = password.length &gt; 6 ;
+    const2 = /\d/.test(password) ;
+    
+    return !([cond1, cond2].includes(false)) ;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Montrez-moi d'autres solutions ! <br />
+            parce que je veux être un vrai 🥇 Javascript Hero !
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Bien sûr, prenez-le !
+        </p>
+        <p>
+            Ce script ne déclare pas de variables, utilise des expressions rationnelles pour vérifier la présence de plus de 6 caractères et utilise l'opérateur AND (&amp;&amp;).
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(s) {
+    return /.{7,}/.test(s) &amp;&amp; /\d/.test(s) ;
+    }
+        </pre>
+        </div>
+        <p>
+            <b>
+                Si vous cliquez sur "Meilleures solutions" dans le menu mission, vous verrez de nombreuses autres solutions intéressantes !
+        solutions intéressantes !
+            </b>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je vous remercie ! Je comprends mieux maintenant ! Tout fonctionne bien !
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Heureux de l'apprendre ! Essayez de résoudre le prochain de cette série.
+        </p>
+    </div>
+</div>
+</body>
+    
