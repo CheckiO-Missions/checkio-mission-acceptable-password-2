@@ -11,11 +11,11 @@
         la série.
         </p>
         <pre class="brush: javascript">
-function isAcceptablePassword(password : string) : boolean {
+function isAcceptablePassword(password: string): boolean {
 
-    const cond1 = password.length &gt; 6 ;
+    const cond1 = password.length &gt; 6;
     
-    return cond1 ;
+    return cond1;
 }  
         </pre>
         <p>
@@ -26,7 +26,7 @@ function isAcceptablePassword(password : string) : boolean {
 <div class="question-answer">
     <div class="question">
         <p>
-            De quel instrument dois-je partir ?
+            De quel instrument dois-je partir?
         </p>
     </div>
     <div class="answer">
@@ -34,14 +34,14 @@ function isAcceptablePassword(password : string) : boolean {
             Tout d'abord, lisez la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_test.asp">test()</a> des expressions régulières. Elle teste la présence d'une correspondance dans une chaîne de caractères et renvoie <b class="code">un résultat positif</b> si elle est trouvée.
         </p>
         <pre class="brush: javascript">
-cond2 = ... .test(password) ; 
+cond2 = ... .test(password); 
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            D'accord, mais qu'est-ce que je cherche ? Mais qu'est-ce que je cherche ?
+            D'accord, mais qu'est-ce que je cherche? Mais qu'est-ce que je cherche?
         </p>
     </div>
     <div class="answer">
@@ -49,14 +49,14 @@ cond2 = ... .test(password) ;
            Il est dit que le <b class="code">mot de passe</b> doit comporter au moins un chiffre. Vous devez donc utiliser ce que l'on appelle <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">un métacaractère numérique</a> comme motif. 
         </p>
         <pre class="brush: javascript">
-cond2 = /\d/.test(password) ;
+cond2 = /\d/.test(password);
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            J'ai besoin que les deux conditions soient <b class="code">vraies</b> pour résoudre la mission. Comment faire ?
+            J'ai besoin que les deux conditions soient <b class="code">vraies</b> pour résoudre la mission. Comment faire?
         </p>
     </div>
     <div class="answer">
@@ -64,7 +64,7 @@ cond2 = /\d/.test(password) ;
             Utilisez la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_includes_array.asp">includes()</a> après l'instruction return avec le tableau des deux conditions.
         </p>
         <pre class="brush: javascript">
-return [cond1, cond2].includes(...) ;
+return [cond1, cond2].includes(...);
         </pre>
         <p>
             Pour réussir les tests, chaque élément doit être <b class="code">vrai</b>. Vous devez donc vérifier si le tableau inclut <b class="code">false</b> et inverser le résultat puisque vous n'avez PAS besoin qu'il inclue <b class="code">false</b>.
@@ -74,21 +74,21 @@ return [cond1, cond2].includes(...) ;
 <div class="question-answer">
     <div class="question">
         <p>
-            À quoi devrait ressembler ma solution finale pour cette mission ?
+            À quoi devrait ressembler ma solution finale pour cette mission?
         </p>
     </div>
     <div class="answer">
         <p>
-            La voici : 
+            La voici: 
         </p>
         <div class="spoiler">
         <pre class="brush: javascript">
-function isAcceptablePassword(password : string) : boolean {
+function isAcceptablePassword(password: string): boolean {
 
-    const cond1 = password.length &gt; 6 ;
-    const2 = /\d/.test(password) ;
+    const cond1 = password.length &gt; 6;
+    const2 = /\d/.test(password);
     
-    return !([cond1, cond2].includes(false)) ;
+    return !([cond1, cond2].includes(false));
 }
         </pre>
         </div>
@@ -97,13 +97,13 @@ function isAcceptablePassword(password : string) : boolean {
 <div class="question-answer">
     <div class="question">
         <p>
-            Montrez-moi d'autres solutions ! <br />
-            parce que je veux être un vrai 🥇 Javascript Hero !
+            Montrez-moi d'autres solutions! <br />
+            Parce que je veux être un vrai 🥇 Javascript Hero!
         </p>
     </div>
     <div class="answer">
         <p>
-            Bien sûr, prenez-le !
+            Bien sûr, prenez-le!
         </p>
         <p>
             Ce script ne déclare pas de variables, utilise des expressions rationnelles pour vérifier la présence de plus de 6 caractères et utilise l'opérateur AND (&amp;&amp;).
@@ -111,14 +111,13 @@ function isAcceptablePassword(password : string) : boolean {
         <div class="spoiler">
         <pre class="brush: javascript">
 function isAcceptablePassword(s) {
-    return /.{7,}/.test(s) &amp;&amp; /\d/.test(s) ;
+    return /.{7,}/.test(s) &amp;&amp; /\d/.test(s);
     }
         </pre>
         </div>
         <p>
             <b>
-                Si vous cliquez sur "Meilleures solutions" dans le menu mission, vous verrez de nombreuses autres solutions intéressantes !
-        solutions intéressantes !
+                Si vous cliquez sur "Meilleures solutions" dans le menu mission, vous verrez de nombreuses autres solutions intéressantes!
             </b>
         </p>
     </div>
@@ -126,12 +125,12 @@ function isAcceptablePassword(s) {
 <div class="question-answer">
     <div class="question">
         <p>
-            Je vous remercie ! Je comprends mieux maintenant ! Tout fonctionne bien !
+            Je vous remercie! Je comprends mieux maintenant! Tout fonctionne bien!
         </p>
     </div>
     <div class="answer">
         <p>
-            👍 Heureux de l'apprendre ! Essayez de résoudre le prochain de cette série.
+            👍 Heureux de l'apprendre! Essayez de résoudre le prochain de cette série.
         </p>
     </div>
 </div>
