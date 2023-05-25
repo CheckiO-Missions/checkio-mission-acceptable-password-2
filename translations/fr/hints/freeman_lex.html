@@ -11,7 +11,7 @@
         la série.
         </p>
         <pre class="brush: python">
-def is_acceptable_password(password : str) -&gt; bool :
+def is_acceptable_password(password :str) -&gt; bool:
 
     cond1 = len(password) &gt; 6
 
@@ -25,7 +25,7 @@ def is_acceptable_password(password : str) -&gt; bool :
 <div class="question-answer">
     <div class="question">
         <p>
-            De quel instrument dois-je partir ?
+            De quel instrument dois-je partir?
         </p>
     </div>
     <div class="answer">
@@ -40,7 +40,7 @@ cond2 = any(...)
 <div class="question-answer">
     <div class="question">
         <p>
-            D'accord. Mais comment vérifier si le caractère est un chiffre ?
+            D'accord. Mais comment vérifier si le caractère est un chiffre?
         </p>
     </div>
     <div class="answer">
@@ -52,12 +52,12 @@ cond2 = any(...)
 <div class="question-answer">
     <div class="question">
         <p>
-            Il s'agit de la vérification d'un seul caractère. Comment vérifier tous les caractères de la chaîne d'entrée ?
+            Il s'agit de la vérification d'un seul caractère. Comment vérifier tous les caractères de la chaîne d'entrée?
         </p>
     </div>
     <div class="answer">
         <p>
-            Utilisez la fonction <a target="_blank" href="https://www.w3schools.com/python/ref_func_map.asp">map()</a> comme argument de la fonction <b class="code">any(</b>) :
+            Utilisez la fonction <a target="_blank" href="https://www.w3schools.com/python/ref_func_map.asp">map()</a> comme argument de la fonction <b class="code">any(</b>):
         </p>
         <pre class="brush: python">
 cond2 = any(map(str.isdigit, password))    
@@ -67,7 +67,7 @@ cond2 = any(map(str.isdigit, password))
 <div class="question-answer">
     <div class="question">
         <p>
-            J'ai besoin que les deux conditions soient <b class="code">vraies</b> pour résoudre la mission. Comment faire ?
+            J'ai besoin que les deux conditions soient <b class="code">vraies</b> pour résoudre la mission. Comment faire?
         </p>
     </div>
     <div class="answer">
@@ -82,7 +82,7 @@ return all([cond1, cond2])
 <div class="question-answer">
     <div class="question">
         <p>
-            A quoi devrait ressembler ma solution finale pour cette mission ?
+            A quoi devrait ressembler ma solution finale pour cette mission?
         </p>
     </div>
     <div class="answer">
@@ -91,7 +91,7 @@ return all([cond1, cond2])
         </p>
         <div class="spoiler">
         <pre class="brush: python">
-def is_acceptable_password(password : str) -&gt; bool :
+def is_acceptable_password(password: str) -&gt; bool:
 
     cond1 = len(password) &gt; 6
     cond2 = any(map(str.isdigit, password))
@@ -104,13 +104,13 @@ def is_acceptable_password(password : str) -&gt; bool :
 <div class="question-answer">
     <div class="question">
         <p>
-            Montrez-moi d'autres solutions ! <br />
-            parce que je veux être une vraie 🥇 Python Ninnjaa !
+            Montrez-moi d'autres solutions! <br />
+            parce que je veux être une vraie 🥇 Python Ninnjaa!
         </p>
     </div>
     <div class="answer">
         <p>
-            Bien sûr, prenez-le !
+            Bien sûr, prenez-le!
         </p>
         <p>
             Recherchez un caractère à l'aide de la regex digitale du module <b class="code"> re</b> préimporté. Utilisez la fonction <b class="code">bool()</b> pour transformer le résultat de la recherche en booléen. Utilisez l'expression <b class="code">lambda</b> pour une vue compacte.
@@ -128,13 +128,13 @@ is_acceptable_password = lambda x : bool(len(x)&gt;6 and re.search('\d', x))
         </p>
         <div class="spoiler">
         <pre class="brush: python">
-is_acceptable_password = lambda x : len(x) &gt; 6 and bool(set(x) &amp; set("0123456789"))
+is_acceptable_password = lambda x: len(x) &gt; 6 and bool(set(x) &amp; set("0123456789"))
         </pre>
         </div>
         <p>
             <b>
                 Si vous cliquez sur "Meilleures solutions" dans le menu mission, vous verrez beaucoup d'autres solutions intéressantes !
-        solutions intéressantes !
+        solutions intéressantes!
             </b>
         </p>
     </div>
@@ -142,12 +142,12 @@ is_acceptable_password = lambda x : len(x) &gt; 6 and bool(set(x) &amp; set("012
 <div class="question-answer">
     <div class="question">
         <p>
-            Je vous remercie ! Je comprends mieux maintenant ! Tout fonctionne bien !
+            Je vous remercie! Je comprends mieux maintenant! Tout fonctionne bien!
         </p>
     </div>
     <div class="answer">
         <p>
-            👍 Heureux de l'apprendre ! Essayez de résoudre le prochain de cette série.
+            👍 Heureux de l'apprendre! Essayez de résoudre le prochain de cette série.
         </p>
     </div>
 </div>
