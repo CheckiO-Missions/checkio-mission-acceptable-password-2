@@ -56,7 +56,7 @@ cond2 = /\d/.test(password);
 <div class="question-answer">
     <div class="question">
         <p>
-            J'ai besoin que les deux conditions soient <b class="code">vraies</b> pour résoudre la mission. Comment faire?
+            J'ai besoin que les deux conditions soient <b class="code">true</b> pour résoudre la mission. Comment faire?
         </p>
     </div>
     <div class="answer">
@@ -86,7 +86,7 @@ return [cond1, cond2].includes(...);
 function isAcceptablePassword(password: string): boolean {
 
     const cond1 = password.length &gt; 6;
-    const2 = /\d/.test(password);
+    const cond2 = /\d/.test(password);
     
     return !([cond1, cond2].includes(false));
 }
@@ -97,7 +97,7 @@ function isAcceptablePassword(password: string): boolean {
 <div class="question-answer">
     <div class="question">
         <p>
-            Montrez-moi d'autres solutions! <br />
+            Montrez-moi d'autres solutions!<br />
             Parce que je veux être un vrai 🥇 Javascript Hero!
         </p>
     </div>
@@ -117,7 +117,7 @@ function isAcceptablePassword(s) {
         </div>
         <p>
             <b>
-                Si vous cliquez sur "Meilleures solutions" dans le menu mission, vous verrez de nombreuses autres solutions intéressantes!
+                Si vous cliquez sur "Best solutions" dans le menu mission, vous verrez de nombreuses autres solutions intéressantes!
             </b>
         </p>
     </div>
