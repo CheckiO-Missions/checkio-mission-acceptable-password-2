@@ -1,0 +1,136 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę kontynuować rozwiązanie z podpowiedzi do poprzedniej misji z serii
+        serii.
+        </p>
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length> 6;
+    
+    return cond1;
+}  
+        </pre>
+        <p>
+            W tej misji należy dodać do tego rozwiązania sprawdzanie, czy hasło zawiera co najmniej jedną cyfrę. 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Od jakiego instrumentu powinienem zacząć?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Przede wszystkim proszę zapoznać się z metodą wyrażeń regularnych <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_test.asp">test()</a>. Testuje ona dopasowanie w ciągu znaków i zwraca <b class="code">true</b>, jeśli zostanie znalezione.
+        </p>
+        <pre class="brush: javascript">
+cond2 = ... .test(password);        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Ale czego ja szukam?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           Mówi się, że <b class="code">password</b> musi mieć co najmniej jedną cyfrę. Więc jako wzór musi Pan użyć tak zwanego <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">digit metacharacter</a>. 
+        </p>
+        <pre class="brush: javascript">
+cond2 = /\d/.test(password);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Aby rozwiązać zadanie, muszę spełnić oba warunki <b class="code">true</b>. Jak to zrobić?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć metody <a target="_blank" href="https://www.w3schools.com/jsref/jsref_includes_array.asp">includes()</a> po instrukcji return z tablicą obu warunków.
+        </p>
+        <pre class="brush: javascript">
+return [cond1, cond2].includes(...);
+        </pre>
+        <p>
+            Aby przejść testy, każdy element musi zawierać <b class="code">true</b>. Proszę więc sprawdzić, czy tablica zawiera <b class="code">false</b> i odwrócić wynik, ponieważ NIE musi ona zawierać <b class="code">false</b>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak więc powinno wyglądać moje ostateczne rozwiązanie dla tej misji?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Oto ono: 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length> 6;
+    const cond2 = /\d/.test(password);
+    
+    return!([cond1, cond2].includes(false));
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę pokazać mi więcej rozwiązań! <br />
+            bo chcę być prawdziwym 🥇 Javascript Hero!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Jasne, proszę łapać!
+        </p>
+        <p>
+            Ten skrypt nie deklaruje zmiennych, używa wyrażenia regularnego do sprawdzania obecności więcej niż 6 znaków i używa operatora AND (&amp;&amp;).
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(s) {
+    return /.{7,}/.test(s) && /\d/.test(s);
+    }
+        </pre>
+        </div>
+        <p>Jeśli klikną Państwo <b>Best solutions</b> w menu misji, zobaczą Państwo wiele innych
+        ciekawych rozwiązań!
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            miło mi to słyszeć! Proszę spróbować rozwiązać następne zadanie z tej serii.
+        </p>
+    </div>
+</div>
+</body>
+    

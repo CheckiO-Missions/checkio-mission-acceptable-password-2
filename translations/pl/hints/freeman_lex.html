@@ -1,0 +1,150 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę kontynuować rozwiązanie z podpowiedzi do poprzedniej misji z serii
+        serii.
+        </p>
+        <pre class="brush: python">
+def is_acceptable_password(password: str) -> bool:
+
+    cond1 = len(password)> 6
+
+    return cond1    
+        </pre>
+        <p>
+           W tej misji należy dodać do tego rozwiązania sprawdzanie, czy hasło zawiera co najmniej jedną cyfrę. 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Od jakiego instrumentu powinienem zacząć?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Przede wszystkim proszę zapoznać się z funkcją <a target="_blank" href="https://www.w3schools.com/python/ref_func_any.asp">any()</a>. Zwraca ona <b class="code">True</b> jeśli którykolwiek z elementów sekwencji wewnątrz jest <b class="code">True</b>.
+        </p>
+        <pre class="brush: python">
+cond2 = any(...)        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Ale jak dokładnie sprawdzić, czy znak jest cyfrą?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć metody string <a target="_blank" href="https://www.w3schools.com/python/ref_string_isdigit.asp">str.isdigit()</a>. Zwraca ona <b class="code">True</b>, jeśli znak jest cyfrą.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jest to sprawdzanie jednego znaku. Jak sprawdzić wszystkie znaki w ciągu wejściowym?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć funkcji <a target="_blank" href="https://www.w3schools.com/python/ref_func_map.asp">map()</a> jako argumentu funkcji <b class="code">any()</b>:
+        </p>
+        <pre class="brush: python">
+cond2 = any(map(str.isdigit, password))    
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Aby rozwiązać zadanie, muszę spełnić oba warunki <b class="code">True</b>. Jak to zrobić?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć funkcji <a target="_blank" href="https://www.w3schools.com/python/ref_func_all.asp">all()</a> po instrukcji return z sekwencją obu warunków.
+        </p>
+        <pre class="brush: python">
+return all([cond1, cond2])
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak więc powinno wyglądać moje ostateczne rozwiązanie dla tej misji?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           Oto ono: 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def is_acceptable_password(password: str) -> bool:
+
+    cond1 = len(password)> 6
+    cond2 = any(map(str.isdigit, password))
+
+    return all([cond1, cond2])
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę pokazać mi więcej rozwiązań! <br />
+            bo chcę być prawdziwym 🥇 Python Ninnjaa!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Jasne, proszę łapać!
+        </p>
+        <p>
+            Proszę wyszukać znak za pomocą wyrażenia regularnego z wcześniej zaimportowanego modułu <b class="code"> re</b>. Proszę użyć funkcji <b class="code">bool()</b>, aby przekształcić wynik wyszukiwania w wartość logiczną. Proszę użyć wyrażenia <b class="code">lambda</b>, aby uzyskać kompaktowy widok.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import re
+
+is_acceptable_password = lambda x: bool(len(x)>6 and re.search('\d', x))
+        </pre>
+        </div>
+        <p>
+            Proszę znaleźć przecięcie zestawu wejściowych ciągów znaków i zestawu cyfr oraz
+        przekształcić wynik w wartość boolowską.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+is_acceptable_password = lambda x: len(x)> 6 and bool(set(x) & set("0123456789"))
+        </pre>
+        </div>
+        <p>Jeśli klikną Państwo <b>Best solutions</b> w menu misji, zobaczą Państwo wiele innych
+        ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            miło mi to słyszeć! Proszę spróbować rozwiązać następne zadanie z tej serii.
+        </p>
+    </div>
+</div>
+</body>
