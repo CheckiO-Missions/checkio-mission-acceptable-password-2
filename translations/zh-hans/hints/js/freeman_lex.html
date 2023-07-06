@@ -1,0 +1,136 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这个任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们继续从系列任务中的前一个任务的提示中寻找解决方案吧
+        系列任务的提示。
+        </p>
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length> 6;
+    
+    return cond1;
+}  
+        </pre>
+        <p>
+            在这个任务中，你应该在这个解决方案中加入检查密码是否至少包含一个数字。 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我应该从什么仪器开始？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            首先，阅读关于正则表达式的<a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_test.asp">test()</a> 方法。它测试一个字符串中的匹配，如果找到则返回<b class="code">true</b> 。
+        </p>
+        <pre class="brush: javascript">
+cond2 = ... .test(password);        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的。但我要找的是什么呢？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           据说，<b class="code">password</b> 必须至少有一个数字。因此，作为一个模式，你需要使用所谓的<a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">digit metacharacter</a> 。 
+        </p>
+        <pre class="brush: javascript">
+cond2 = /\d/.test(password);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我需要两个条件都是<b class="code">true</b> 来解决这个任务。如何做到这一点？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            在有两个条件的数组的返回语句后使用方法<a target="_blank" href="https://www.w3schools.com/jsref/jsref_includes_array.asp">includes()</a> 。
+        </p>
+        <pre class="brush: javascript">
+return [cond1, cond2].includes(...);
+        </pre>
+        <p>
+            为了通过测试，每个元素都必须是<b class="code">true</b> 。因此，你需要检查，数组是否包括<b class="code">false</b> ，并将结果反转，因为你不需要它包括<b class="code">false</b> 。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            那么，这个任务的最终解决方案应该是什么样子的呢？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            这就是了： 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length> 6;
+    const cond2 = /\d/.test(password);
+    
+    return!([cond1, cond2].includes(false));
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            告诉我更多的解决方案!<br />
+            因为我想成为一个真正的🥇 Javascript英雄!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            当然，抓住它!
+        </p>
+        <p>
+            这个脚本没有声明变量，没有使用regex来检查超过6个字符的存在，也没有使用AND（&amp;&amp;）运算符。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(s) {
+    return /.{7,}/.test(s) && /\d/.test(s);
+    }
+        </pre>
+        </div>
+        <p>如果你在任务菜单上点击<b>Best solutions</b> ，你会看到很多其他的
+        有趣的解决方案!
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            谢谢!我现在知道并理解了更多!一切运作正常!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍很高兴听到这个消息!试着解决这个系列中的下一个问题。
+        </p>
+    </div>
+</div>
+</body>
+    
