@@ -1,0 +1,150 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这个任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们继续从系列任务中的前一个任务的提示中寻找解决方案吧
+        系列任务的提示。
+        </p>
+        <pre class="brush: python">
+def is_acceptable_password(password: str) -> bool:
+
+    cond1 = len(password)> 6
+
+    return cond1    
+        </pre>
+        <p>
+           在这个任务中，你应该在这个解决方案中加入检查密码是否至少包含一个数字。 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我应该从什么仪器开始？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            首先，阅读关于<a target="_blank" href="https://www.w3schools.com/python/ref_func_any.asp">any()</a> 函数。如果序列中的任何元素是<b class="code">True</b> ，它将返回<b class="code">True</b> 。
+        </p>
+        <pre class="brush: python">
+cond2 = any(...)        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的。但究竟如何检查该字符是否为数字？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            使用字符串方法<a target="_blank" href="https://www.w3schools.com/python/ref_string_isdigit.asp">str.isdigit()</a> 。它返回<b class="code">True</b> ，如果字符是一个数字。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            这只是一个字符的检查。如何检查输入字符串中的所有字符？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            使用函数<a target="_blank" href="https://www.w3schools.com/python/ref_func_map.asp">map()</a> 作为函数<b class="code">any()</b> 的参数：
+        </p>
+        <pre class="brush: python">
+cond2 = any(map(str.isdigit, password))    
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我需要两个条件都是<b class="code">True</b> ，以解决这个任务。如何做到这一点？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            在返回语句后使用函数<a target="_blank" href="https://www.w3schools.com/python/ref_func_all.asp">all()</a> ，并附上两个条件的序列。
+        </p>
+        <pre class="brush: python">
+return all([cond1, cond2])
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            那么我对这项任务的最终解决方案应该是怎样的呢？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           这就是了： 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def is_acceptable_password(password: str) -> bool:
+
+    cond1 = len(password)> 6
+    cond2 = any(map(str.isdigit, password))
+
+    return all([cond1, cond2])
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            告诉我更多的解决方案!<br />
+            因为我想成为一个真正的🥇 Python Ninnjaa!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            当然，抓住它!
+        </p>
+        <p>
+            用预先导入的<b class="code"> re</b> 模块中的数字重码搜索一个字符。使用<b class="code">bool()</b> 函数将搜索结果转化为布尔值。使用<b class="code">lambda</b> 表达式进行紧凑查看。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+import re
+
+is_acceptable_password = lambda x: bool(len(x)>6 and re.search('\d', x))
+        </pre>
+        </div>
+        <p>
+            找到输入字符串集和数字集的交集，并将结果转化为布尔值。
+        将结果转化为布尔值。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+is_acceptable_password = lambda x: len(x)> 6 and bool(set(x) & set("0123456789"))
+        </pre>
+        </div>
+        <p>如果你在任务菜单上点击<b>Best solutions</b> ，你会看到很多其他的
+        有趣的解决方案!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            谢谢!我现在知道并理解了更多!一切工作都很顺利!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍很高兴听到这个消息!试着解决这个系列中的下一个问题。
+        </p>
+    </div>
+</div>
+</body>
