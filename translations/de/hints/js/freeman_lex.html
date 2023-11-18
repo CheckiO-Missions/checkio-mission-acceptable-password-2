@@ -1,0 +1,136 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Lassen Sie uns mit der Lösung aus den Hinweisen der vorherigen Mission in
+        der Serie.
+        </p>
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length> 6;
+    
+    return cond1;
+}  
+        </pre>
+        <p>
+            In dieser Mission sollten Sie zusätzlich zur Lösung prüfen, ob das Passwort mindestens eine Ziffer enthält. 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Mit welchem Instrument soll ich beginnen?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Lesen Sie zunächst etwas über die Methode der regulären Ausdrücke <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_test.asp">test()</a>. Sie testet auf eine Übereinstimmung in einer Zeichenkette und gibt <b class="code">true</b> zurück, wenn sie gefunden wurde.
+        </p>
+        <pre class="brush: javascript">
+cond2 = ... .test(password);        
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nun gut. Aber wonach soll ich suchen?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+           Es wird gesagt, dass <b class="code">password</b> mindestens eine Ziffer haben muss. Als Muster müssen Sie also die so genannte <a target="_blank" href="https://www.w3schools.com/jsref/jsref_regexp_digit.asp">digit metacharacter</a> verwenden. 
+        </p>
+        <pre class="brush: javascript">
+cond2 = /\d/.test(password);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Um die Aufgabe zu lösen, müssen beide Bedingungen <b class="code">true</b> sein. Wie kann ich das tun?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Verwenden Sie die Methode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_includes_array.asp">includes()</a> nach der return-Anweisung mit einem Array beider Bedingungen.
+        </p>
+        <pre class="brush: javascript">
+return [cond1, cond2].includes(...);
+        </pre>
+        <p>
+            Um Tests zu bestehen, muss jedes Element <b class="code">true</b> sein. Sie müssen also prüfen, ob das Array <b class="code">false</b> enthält und das Ergebnis invertieren, da es NICHT <b class="code">false</b> enthalten muss.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie sollte also meine endgültige Lösung für diese Aufgabe aussehen?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Hier ist sie: 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(password: string): boolean {
+
+    const cond1 = password.length> 6;
+    const cond2 = /\d/.test(password);
+    
+    return!([cond1, cond2].includes(false));
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Zeigen Sie mir mehr Lösungen! <br />
+            denn ich möchte ein echter 🥇 Javascript-Held sein!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Klar, schnappen Sie es sich!
+        </p>
+        <p>
+            Dieses Skript ist ohne die Deklaration von Variablen, die Verwendung von Regex zur Überprüfung von mehr als 6 Zeichen und die Verwendung des Operators AND (&amp;&amp;).
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function isAcceptablePassword(s) {
+    return /.{7,}/.test(s) && /\d/.test(s);
+    }
+        </pre>
+        </div>
+        <p>Wenn Sie im Missionsmenü auf <b>Best solutions</b> klicken, sehen Sie eine Menge anderer
+        interessante Lösungen!
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Danke! Ich weiß und verstehe jetzt mehr! Alles funktioniert bestens!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Freut mich zu hören! Versuchen Sie, das nächste Rätsel in dieser Serie zu lösen.
+        </p>
+    </div>
+</div>
+</body>
+    
